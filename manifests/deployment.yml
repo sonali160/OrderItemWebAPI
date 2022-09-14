@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "orderfinal-3186"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "orderfinal-3186"
+  template:
+    metadata:
+      labels:
+        app: "orderfinal-3186"
+    spec:
+      containers:
+        - name: "orderfinal-3186"
+          image: "finalorderregistrycontainer.azurecr.io/orderfinal"
+          ports:
+          - containerPort: 80
